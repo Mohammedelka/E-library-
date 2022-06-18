@@ -1,0 +1,349 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+body {
+ font-family: "Roboto", helvetica, arial, sans-serif;
+ font-size: 16px;
+ font-weight: 400;
+ text-rendering: optimizeLegibility;
+}
+
+/*** Table Styles **/
+
+.table-fill {
+ background: white;
+ border-radius: 3px;
+ border-collapse: collapse;
+ height: 32px;
+ margin: auto;
+ max-width: 600px;
+ padding: 5px;
+ width: 100%;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ animation: float 5s infinite;
+ margin-top: 10px;
+}
+
+th {
+ color: #d5dde5;
+ background: #1b1e24;
+ border-bottom: 4px solid #9ea7af;
+ border-right: 1px solid #343a45;
+ font-size: 23px;
+ font-weight: 100;
+ padding: 24px;
+ text-align: left;
+ text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+ vertical-align: middle;
+}
+
+th:first-child {
+ border-top-left-radius: 3px;
+}
+
+th:last-child {
+ border-top-right-radius: 3px;
+ border-right: none;
+}
+
+tr {
+ border-top: 1px solid #c1c3d1;
+ border-bottom: 1px solid #c1c3d1;
+ color: #666b85;
+ font-size: 16px;
+ font-weight: normal;
+ text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+ background: #4e5066;
+ color: #ffffff;
+ border-top: 1px solid #22262e;
+}
+
+tr:first-child {
+ border-top: none;
+}
+
+tr:last-child {
+ border-bottom: none;
+}
+
+tr:nth-child(odd) td {
+ background: #ebebeb;
+}
+
+tr:nth-child(odd):hover td {
+ background: #4e5066;
+}
+
+tr:last-child td:first-child {
+ border-bottom-left-radius: 3px;
+}
+
+tr:last-child td:last-child {
+ border-bottom-right-radius: 3px;
+}
+
+td {
+ background: #ffffff;
+ padding: 10px;
+ text-align: left;
+ vertical-align: middle;
+ font-weight: 300;
+ font-size: 18px;
+ text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+ border-right: 1px solid #c1c3d1;
+}
+
+td:last-child {
+ border-right: 0px;
+}
+
+th.text-left {
+ text-align: left;
+}
+
+th.text-center {
+ text-align: center;
+}
+
+th.text-right {
+ text-align: right;
+}
+
+td.text-left {
+ text-align: left;
+}
+
+td.text-center {
+ text-align: center;
+}
+
+td.text-right {
+ text-align: right;
+}
+
+/*****************************************************************/
+
+form {
+ grid-area: 2/1/3/3;
+ height: 80vh;
+ font-family: "Balsamiq Sans", sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: flex-start;
+ padding-top: 5px;
+}
+
+.card {
+ width: 80%;
+ padding: 10px 0px 0px 40px;
+ border: 4px solid rgba(0, 0, 0, 0.3);
+ border-radius: 50px;
+ position: relative;
+ background: #666666;
+}
+
+.card h2 {
+ color: rgba(226, 222, 222, 0.986);
+ font-size: 60px;
+ text-transform: uppercase;
+ text-align: center;
+}
+
+.card .row {
+ position: relative;
+ width: 100%;
+ display: grid;
+ grid: auto / auto auto;
+ grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+ grid-gap: 20px;
+}
+
+.card .row .col {
+ position: relative;
+ width: 100%;
+ margin: 30px 20px 40px 0;
+ transition: 0.5s;
+}
+
+.card .row .form-group {
+ position: relative;
+ width: 100%;
+ height: 30px;
+ color: #ffffff;
+}
+
+.card .row .form-group input {
+ position: absolute;
+ width: 70%;
+ height: 90%;
+ background: transparent;
+ outline: none;
+ font-size: 24px;
+ padding: 10px 0 10px 20px;
+ border: 5px solid rgba(0, 0, 0, 0.3);
+ box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+ color: #ffffff;
+ border-radius: 50px;
+}
+#subjects,
+#authors {
+ position: absolute;
+ width: 75%;
+ background: transparent;
+ outline: none;
+ font-size: 24px;
+ padding: 10px 0 15px 30px;
+ border: 5px solid rgba(0, 0, 0, 0.3);
+ box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+ color: #ffffff;
+ border-radius: 50px;
+}
+
+.card .row .form-group label {
+ line-height: 40px;
+ color: #ffffff;
+ font-size: 24px;
+ margin: 0 0 0 30px;
+ display: block;
+ pointer-events: none;
+}
+
+.card .row .form-group input:focus {
+ border: 5px solid #ffffff;
+ transition: all 0.5s;
+}
+.card .row input[type="submit"],
+.card .row input[type="button"] {
+ border: 5px solid rgba(0, 0, 0, 0.3);
+ box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
+ height: 50px;
+ width: 75%;
+ cursor: pointer;
+ outline: none;
+ background: transparent;
+ text-transform: uppercase;
+ color: #ffffff;
+ line-height: 20px;
+ font-size: 24px;
+ font-weight: 700;
+ border-radius: 45px;
+ transition: all 0.4s;
+ margin: 20px;
+}
+
+.card .row input[type="submit"]:hover,
+.card .row input[type="button"]:hover {
+ border: 5px solid rgba(255, 255, 255, 1);
+ color: #ffffff;
+ transition: all 0.4s;
+}
+
+/****************************************************/
+
+.file-upload .file-upload-select {
+ display: block;
+ color: #dbdbdb;
+ cursor: pointer;
+ text-align: center;
+ background: #666666;
+ overflow: hidden;
+ position: relative;
+ border-radius: 50px;
+ width: 100%;
+ height: 100%;
+}
+.file-upload {
+ position: absolute;
+ width: 75%;
+ height: auto;
+ background: transparent;
+ outline: none;
+ font-size: 24px;
+ border: 5px solid rgba(0, 0, 0, 0.3);
+ box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+ color: #ffffff;
+ border-radius: 50px;
+}
+.file-upload .file-upload-select .file-select-name {
+ display: inline-block;
+ padding: 10px;
+}
+.file-upload .file-upload-select:hover .file-select-button {
+ background: #324759;
+ color: #ffffff;
+ transition: all 0.2s ease-in-out;
+ -moz-transition: all 0.2s ease-in-out;
+ -webkit-transition: all 0.2s ease-in-out;
+ -o-transition: all 0.2s ease-in-out;
+}
+.file-upload .file-upload-select input[type="file"] {
+ display: none;
+}
+#next,
+#previous {
+ padding: 10px;
+ background-color: blueviolet;
+ border-radius: 20px;
+ font-weight: bolder;
+}
+#next:hover,
+#previous:hover {
+ background-color: rgb(26, 88, 221);
+}
+#next:active,
+#previous:active {
+ color: tomato;
+}
+
+.booksmenu {
+ position: relative;
+ transition: all 300ms ease-in-out;
+}
+.dropdown {
+ display: none;
+ top: 0;
+ width: 104%;
+}
+.booksmenu:hover {
+ margin-bottom: 115px;
+}
+.booksmenu:hover .dropdown {
+ display: block;
+ position: absolute;
+ top: 50px;
+}
+.dropdown-item {
+ background-color: #5b6467;
+ background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
+}
+a {
+ color: black;
+}
+.searchbar {
+ margin-left: auto;
+ background-color: white;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+ border-radius: 5px;
+}
+
+.searchbartext {
+ color: #22262e;
+}
+
+#search {
+ border: 2px solid #1b1e24;
+ margin: 5px;
+ padding: 5px;
+ border-radius: 10px;
+}
+input[value="search"],
+#searchtype {
+ padding: 5px;
+ color: #dbdbdb;
+ background-color: #22262e;
+ border-radius: 10px;
+}
+

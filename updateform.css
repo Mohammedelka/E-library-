@@ -1,0 +1,175 @@
+
+form {
+ grid-area: 2/1/3/3;
+ height: 80vh;
+ font-family: "Balsamiq Sans", sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: flex-start;
+ padding-top: 5px;
+}
+
+.card {
+ width: 80%;
+ padding: 10px 0px 0px 40px;
+ border: 4px solid rgba(0, 0, 0, 0.3);
+ border-radius: 50px;
+ position: relative;
+ background: #666666;
+}
+
+.card h2 {
+ color: rgba(226, 222, 222, 0.986);
+ font-size: 60px;
+ text-transform: uppercase;
+ text-align: center;
+}
+
+.card .row {
+ position: relative;
+ width: 100%;
+ display: grid;
+ grid: auto / auto auto;
+ grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+ grid-gap: 20px;
+}
+
+.card .row .col {
+ position: relative;
+ width: 100%;
+ margin: 30px 20px 40px 0;
+ transition: 0.5s;
+}
+
+.card .row .form-group {
+ position: relative;
+ width: 100%;
+ height: 20px;
+ color: #ffffff;
+}
+
+.card .row .form-group input {
+ position: absolute;
+ width: 70%;
+ height: 90%;
+ background: transparent;
+ outline: none;
+ font-size: 24px;
+ padding: 10px 0 10px 20px;
+ border: 5px solid rgba(0, 0, 0, 0.3);
+ box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+ color: #ffffff;
+ border-radius: 50px;
+}
+
+.card .row .form-group label {
+ line-height: 40px;
+ color: #ffffff;
+ font-size: 24px;
+ margin: 0 0 0 30px;
+ display: block;
+ pointer-events: none;
+}
+
+.card .row .form-group input:focus {
+ border: 5px solid #ffffff;
+ transition: all 0.5s;
+}
+.card .row input[type="submit"],
+.card .row input[type="button"] {
+ border: 5px solid rgba(0, 0, 0, 0.3);
+ box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
+ height: 50px;
+ width: 75%;
+ cursor: pointer;
+ outline: none;
+ background: transparent;
+ text-transform: uppercase;
+ color: #ffffff;
+ line-height: 20px;
+ font-size: 24px;
+ font-weight: 700;
+ border-radius: 45px;
+ transition: all 0.4s;
+ margin: 10px;
+}
+.card .row input[type="submit"]:hover,
+.card .row input[type="button"]:hover {
+ border: 5px solid rgba(255, 255, 255, 1);
+ color: #ffffff;
+ transition: all 0.4s;
+}
+
+/* label[for="image"] {
+ background: transparent;
+ border: 5px solid rgba(0, 0, 0, 0.3);
+ border-radius: 50px;
+ color: #ffffff;
+ cursor: pointer;
+ display: inline-block;
+ font-family: sans-serif;
+ font-size: 24px;
+ font-weight: 500;
+  margin-bottom: 1rem; 
+ outline: none;
+ width: 70%;
+ height: 90%;
+ padding: 10px 0 10px 20px;
+ box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.card .row .form-image {
+ position: relative;
+ width: 100%;
+ height: 40px;
+ color: #ffffff;
+}
+label[for="image"]:hover {
+ background-color: #949292;
+}
+.nonempty {
+ background-color: aqua;
+} */
+/****************************************************/
+
+.file-upload .file-upload-select {
+ display: block;
+ color: #dbdbdb;
+ cursor: pointer;
+ text-align: center;
+ background: #666666;
+ overflow: hidden;
+ position: relative;
+ border-radius: 50px;
+ width: 100%;
+ height: 100%;
+}
+.file-upload {
+ position: absolute;
+ width: 75%;
+ height: auto;
+ background: transparent;
+ outline: none;
+ font-size: 24px;
+ border: 5px solid rgba(0, 0, 0, 0.3);
+ box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+ color: #ffffff;
+ border-radius: 50px;
+}
+.file-upload .file-upload-select .file-select-name {
+ display: inline-block;
+ padding: 10px;
+}
+.file-upload .file-upload-select:hover .file-select-button {
+ background: #324759;
+ color: #ffffff;
+ transition: all 0.2s ease-in-out;
+ -moz-transition: all 0.2s ease-in-out;
+ -webkit-transition: all 0.2s ease-in-out;
+ -o-transition: all 0.2s ease-in-out;
+}
+.file-upload .file-upload-select input[type="file"] {
+ display: none;
+}
+.showinput {
+ display: block;
+}

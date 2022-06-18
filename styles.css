@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i");
+html,
+body {
+ margin: 0;
+ height: 100%;
+ font-family: "Josefin Sans", sans-serif;
+}
+body {
+ background: #1b2030 url(images/book.jpg) 50% 0 no-repeat;
+ background-size: 100%;
+ background-attachment: fixed;
+ display: grid;
+ grid-template-columns: 20vw 1fr;
+ grid-template-rows: 80px 1fr;
+}
+a {
+ text-decoration: none;
+}
+.header {
+ position: fixed;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: flex-start;
+ align-content: flex-start;
+ color: #eee;
+ grid-area: 1/1/2/4;
+ width: 100%;
+ background: linear-gradient(
+  to bottom,
+  rgba(0, 0, 0, 0.12) 40%,
+  rgba(27, 32, 48, 1) 100%
+ );
+}
+
+#logo {
+ cursor: pointer;
+}
+.header a {
+ color: #eee;
+}
+.menuicon {
+ display: inline-flex;
+ align-items: center;
+ align-content: center;
+ margin: 20px;
+ padding: 0px 10px;
+ height: 40px;
+}
+.item {
+ border: 2px solid #fff;
+ border-radius: 3px;
+ text-decoration: none;
+ display: inline-flex;
+ align-items: center;
+ align-content: center;
+ margin: 20px;
+ font-weight: 900;
+ font-size: 1.1em;
+ line-height: 1;
+ box-sizing: border-box;
+ height: 40px;
+}
+.sides {
+ flex: 0 0 auto;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ border-bottom: 1px solid white;
+ background-color: rgba(51, 51, 51, 0.5);
+}
+.lastitem {
+ position: relative;
+}
+.lastitem:hover .accountmenu {
+ display: flex;
+}
+.accountmenu {
+ height: 200px;
+ width: 150px;
+ position: absolute;
+ top: 40px;
+ right: -60px;
+ background-color: rgb(194, 199, 199);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ border: 2px solid white;
+ display: none;
+}
+.accountmenuitem {
+ border-radius: 10px;
+ text-align: center;
+ margin: 10px;
+ width: 80%;
+ background-color: #2f4353;
+ height: 60px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ cursor: pointer;
+ text-align: center;
+}
+.accountmenuitem:hover {
+ transform: skewX(-3deg);
+}
+
+.info {
+ position: absolute;
+ top: 30vh;
+ left: 25vw;
+ text-align: center;
+ text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+ color: white;
+}
+
+.info h1 {
+ background-color: rgba(161, 81, 15, 0.596);
+ border-radius: 5px;
+}
+
+.sidebar {
+ width: 20vw;
+ height: calc(100% - 80px);
+ position: fixed;
+ bottom: 0;
+ left: -50vw;
+ border: 2px solid rgb(87, 86, 85);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-evenly;
+ background-color: rgba(177, 173, 173, 0.7);
+ border-radius: 10px;
+ transition: left 1s ease-in-out;
+ overflow: hidden;
+ z-index: 3;
+}
+.movesidebar {
+ left: 0;
+}
+.side-item {
+ width: 95%;
+ height: 50px;
+ border: 1px solid khaki;
+ background-color: #d9e4f5;
+ background-image: linear-gradient(315deg, #8e97a3 0%, #f5e3e6 74%);
+ border-radius: 10px;
+ display: flex;
+ align-items: center;
+}
+.side-item:hover {
+ transform: scale(1.05);
+ cursor: pointer;
+ background-color: #2f4353;
+ background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);
+}
+.icon {
+ padding: 10px;
+}
+.text {
+ font-family: "Josefin Sans", sans-serif;
+ font-size: 1.5em;
+ font-weight: 900;
+ line-height: 1;
+}
+
+.maincontainer {
+ grid-area: 2/1/3/3;
+}
+/*****************************changepass*****************/
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+ width: 50vw;
+ height: 50vh;
+ padding: 8% 0 0;
+ margin: auto;
+ transform: translateX(50%);
+}
+.form {
+ position: relative;
+ z-index: 1;
+ background: #ffffff;
+ max-width: 360px;
+ margin: 0 auto 100px;
+ padding: 45px;
+ text-align: center;
+ box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+ font-family: "Roboto", sans-serif;
+ outline: 0;
+ background: #f2f2f2;
+ width: 100%;
+ border: 0;
+ margin: 0 0 15px;
+ padding: 15px;
+ box-sizing: border-box;
+ font-size: 14px;
+}
+.form input[type="submit"] {
+ font-family: "Roboto", sans-serif;
+ text-transform: uppercase;
+ outline: 0;
+ background: #4caf50;
+ width: 100%;
+ border: 0;
+ padding: 15px;
+ color: #ffffff;
+ font-size: 14px;
+ -webkit-transition: all 0.3 ease;
+ transition: all 0.3 ease;
+ cursor: pointer;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+ background: #43a047;
+}
+.form .message {
+ margin: 15px 0 0;
+ color: #b3b3b3;
+ font-size: 12px;
+}
+.form .message a {
+ color: #4caf50;
+ text-decoration: none;
+}
+.form .register-form {
+ display: none;
+}
+.container {
+ position: relative;
+ z-index: 1;
+ max-width: 300px;
+ margin: 0 auto;
+}
+.container:before,
+.container:after {
+ content: "";
+ display: block;
+ clear: both;
+}
+.container .info {
+ margin: 50px auto;
+ text-align: center;
+}
+.container .info h1 {
+ margin: 0 0 15px;
+ padding: 0;
+ font-size: 36px;
+ font-weight: 300;
+ color: #1a1a1a;
+}
+.container .info span {
+ color: #4d4d4d;
+ font-size: 12px;
+}
+.container .info span a {
+ color: #000000;
+ text-decoration: none;
+}
+.container .info span .fa {
+ color: #ef3b3a;
+}
